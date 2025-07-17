@@ -16,6 +16,9 @@ script = ExtResource("1_6bp64")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 65.8212)
 script = ExtResource("1_kry3j")
 
+[node name="Player" parent="PlatformSpawner" instance=ExtResource("6_21xkr")]
+transform = Transform3D(1, -1.9984e-15, 2.22045e-16, -9.32587e-15, 1, 0, 1.22125e-15, 0, 1, 6.39488e-14, -9.53674e-07, 0)
+
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, -8.27662e-08, -1.89685e-09, 8.0437e-08, 0.965926, 0.258819, -1.95893e-08, -0.258819, 0.965926, 0, 3, 4)
 environment = SubResource("Environment_kry3j")
@@ -43,6 +46,3 @@ offset_top = 2.0
 offset_right = 104.0
 offset_bottom = 26.0
 text = "0"
-
-[node name="Player" parent="." instance=ExtResource("6_21xkr")]
-transform = Transform3D(1, -1.9984e-15, 2.22045e-16, -1.67644e-14, 1, 0, 1.66533e-15, 0, 1, 6.39488e-14, -9.53674e-07, 65.8212)

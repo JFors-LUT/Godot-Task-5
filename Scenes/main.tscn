@@ -45,4 +45,3 @@ offset_bottom = 26.0
 text = "0"
 
 [node name="Player" parent="." instance=ExtResource("6_21xkr")]
-transform = Transform3D(1, -1.9984e-15, 2.22045e-16, -1.67644e-14, 1, 0, 1.66533e-15, 0, 1, 6.39488e-14, -9.53674e-07, 65.8212)

@@ -4,7 +4,7 @@ var score : int
 var high_score : int
 var delta_accumulator : float
 var player_dead := false
-@onready var ship: Ship = $Player
+@onready var ship = $Player
 
 
 

@@ -3,23 +3,23 @@
 [ext_resource type="Script" uid="uid://c8inat4tls4sn" path="res://Scripts/Platform.gd" id="1_7dhtc"]
 [ext_resource type="Material" uid="uid://5n3u3r785sj1" path="res://Assets/Materials/red.tres" id="2_0hgvv"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_7dhtc"]
+[sub_resource type="BoxMesh" id="BoxMesh_0hgvv"]
+size = Vector3(1, 0.2, 2)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_7dhtc"]
-points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_0hgvv"]
+points = PackedVector3Array(0.5, 0.1, 1, 0.5, -0.1, 1, 0.5, 0.1, -1, -0.5, 0.1, 1, -0.5, -0.1, 1, 0.5, -0.1, -1, -0.5, 0.1, -1, -0.5, -0.1, -1)
 
 [node name="PlatformShort" type="StaticBody3D"]
 script = ExtResource("1_7dhtc")
 metadata/_custom_type_script = "uid://c8inat4tls4sn"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 2, 0, 0, 0)
 material_override = ExtResource("2_0hgvv")
-mesh = SubResource("BoxMesh_7dhtc")
+mesh = SubResource("BoxMesh_0hgvv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_7dhtc")
+shape = SubResource("ConvexPolygonShape3D_0hgvv")

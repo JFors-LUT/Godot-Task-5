@@ -4,21 +4,22 @@
 [ext_resource type="Material" uid="uid://ba7nw3o3thqtm" path="res://Assets/Materials/blue.tres" id="2_8q6su"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_2m8hc"]
+size = Vector3(1, 0.2, 5)
 
-[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8q6su"]
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_2m8hc"]
+points = PackedVector3Array(0.5, 0.1, 2.5, 0.5, -0.1, 2.5, 0.5, 0.1, -2.5, -0.5, 0.1, 2.5, -0.5, -0.1, 2.5, 0.5, -0.1, -2.5, -0.5, 0.1, -2.5, -0.5, -0.1, -2.5)
 
 [node name="PlatformLong" type="StaticBody3D"]
 script = ExtResource("1_2m8hc")
 metadata/_custom_type_script = "uid://c8inat4tls4sn"
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 5, 0, 0, 0)
 material_override = ExtResource("2_8q6su")
 mesh = SubResource("BoxMesh_2m8hc")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("ConvexPolygonShape3D_8q6su")
+shape = SubResource("ConvexPolygonShape3D_2m8hc")

@@ -16,6 +16,10 @@ points = PackedVector3Array(1.5, 0.1, 10, 1.5, -0.1, 10, 1.5, 0.1, -10, -1.5, 0.
 script = ExtResource("1_iyu3d")
 metadata/_custom_type_script = "uid://c8inat4tls4sn"
 
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
 material_override = ExtResource("2_5fxi3")

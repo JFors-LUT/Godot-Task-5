@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dy5va8iw18gew"]
+
+[ext_resource type="Script" uid="uid://c8inat4tls4sn" path="res://Scripts/Platform.gd" id="1_2m8hc"]
+[ext_resource type="Material" uid="uid://ba7nw3o3thqtm" path="res://Assets/Materials/blue.tres" id="2_8q6su"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2m8hc"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8q6su"]
+
+[node name="PlatformLong" type="StaticBody3D"]
+script = ExtResource("1_2m8hc")
+metadata/_custom_type_script = "uid://c8inat4tls4sn"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 5, 0, 0, 0)
+material_override = ExtResource("2_8q6su")
+mesh = SubResource("BoxMesh_2m8hc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_8q6su")

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://de1j7rjvv024o"]
+
+[ext_resource type="Script" uid="uid://bcts7agxrne5d" path="res://Scripts/platform_spawner.gd" id="1_kry3j"]
+[ext_resource type="PackedScene" uid="uid://bo5tgc47tqsih" path="res://Scenes/Player.tscn" id="4_75od5"]
+
+[node name="main" type="Node"]
+
+[node name="LevelSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 65.8212)
+script = ExtResource("1_kry3j")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Player" parent="." instance=ExtResource("4_75od5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 6.01396e-08, 8.63407e-08, 9.52528e-08, 0.866025, 0.5, -4.47035e-08, 0.5, -0.866025, 0, 4, -3)

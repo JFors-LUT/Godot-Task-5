@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cc7kb8ur3aesl"]
+
+[ext_resource type="Script" uid="uid://c8inat4tls4sn" path="res://Scripts/Platform.gd" id="1_epouf"]
+[ext_resource type="Material" uid="uid://ct4kxal823ctc" path="res://Assets/Materials/magenta.tres" id="2_ccokk"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_epouf"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_epouf"]
+points = PackedVector3Array(0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5)
+
+[node name="PlatformMedium" type="StaticBody3D"]
+script = ExtResource("1_epouf")
+metadata/_custom_type_script = "uid://c8inat4tls4sn"
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 3.5, 0, 0, 0)
+material_override = ExtResource("2_ccokk")
+mesh = SubResource("BoxMesh_epouf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.2, 0, 0, 0, 3.5, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_epouf")

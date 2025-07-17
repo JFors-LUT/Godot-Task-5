@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://bpoplxae4olf8"]
+
+[ext_resource type="Script" uid="uid://c8inat4tls4sn" path="res://Scripts/Platform.gd" id="1_iyu3d"]
+[ext_resource type="Material" uid="uid://nxvttxu5w66j" path="res://Assets/Materials/green.tres" id="2_5fxi3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oixov"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5fxi3"]
+material = SubResource("StandardMaterial3D_oixov")
+size = Vector3(3, 0.2, 20)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_oixov"]
+points = PackedVector3Array(1.5, 0.1, 10, 1.5, -0.1, 10, 1.5, 0.1, -10, -1.5, 0.1, 10, -1.5, -0.1, 10, 1.5, -0.1, -10, -1.5, 0.1, -10, -1.5, -0.1, -10)
+
+[node name="PlatformStart" type="StaticBody3D"]
+script = ExtResource("1_iyu3d")
+metadata/_custom_type_script = "uid://c8inat4tls4sn"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+material_override = ExtResource("2_5fxi3")
+mesh = SubResource("BoxMesh_5fxi3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -10)
+shape = SubResource("ConvexPolygonShape3D_oixov")

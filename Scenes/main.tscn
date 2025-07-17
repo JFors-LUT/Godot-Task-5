@@ -1,0 +1,108 @@
+[gd_scene load_steps=18 format=3 uid="uid://de1j7rjvv024o"]
+
+[ext_resource type="Script" uid="uid://b7p4uxqxip6rx" path="res://Scripts/Main.gd" id="1_6bp64"]
+[ext_resource type="Script" uid="uid://bcts7agxrne5d" path="res://Scripts/platform_spawner.gd" id="1_kry3j"]
+[ext_resource type="Script" uid="uid://c8inat4tls4sn" path="res://Scripts/Platform.gd" id="2_kry3j"]
+[ext_resource type="Material" uid="uid://5n3u3r785sj1" path="res://Assets/Materials/red.tres" id="3_21xkr"]
+[ext_resource type="Material" uid="uid://ct4kxal823ctc" path="res://Assets/Materials/magenta.tres" id="4_6bp64"]
+[ext_resource type="Material" uid="uid://ba7nw3o3thqtm" path="res://Assets/Materials/blue.tres" id="5_344ge"]
+[ext_resource type="PackedScene" uid="uid://dkgvfxa0r2a5v" path="res://Scenes/player.tscn" id="6_21xkr"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7i20d"]
+size = Vector3(1, 0.2, 2)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_l43ec"]
+points = PackedVector3Array(0.5, 0.1, 1, 0.5, -0.1, 1, 0.5, 0.1, -1, -0.5, 0.1, 1, -0.5, -0.1, 1, 0.5, -0.1, -1, -0.5, 0.1, -1, -0.5, -0.1, -1)
+
+[sub_resource type="PackedScene" id="PackedScene_ynf5e"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("PlatformSmall", "StaticBody3D", "script", "metadata/_custom_type_script", "MeshInstance3D", "MeshInstance3D", "material_override", "mesh", "CollisionShape3D", "CollisionShape3D", "shape"),
+"node_count": 3,
+"node_paths": [NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 1073741824, 0, 5, 4, -1, 2, 6, 2, 7, 3, 0, 1073741825, 0, 9, 8, -1, 1, 10, 4, 0),
+"variants": [ExtResource("2_kry3j"), "uid://c8inat4tls4sn", ExtResource("3_21xkr"), SubResource("BoxMesh_7i20d"), SubResource("ConvexPolygonShape3D_l43ec")],
+"version": 3
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_xovdf"]
+size = Vector3(1, 0.2, 3.5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ccokk"]
+points = PackedVector3Array(0.5, 0.1, 1.75, 0.5, -0.1, 1.75, 0.5, 0.1, -1.75, -0.5, 0.1, 1.75, -0.5, -0.1, 1.75, 0.5, -0.1, -1.75, -0.5, 0.1, -1.75, -0.5, -0.1, -1.75)
+
+[sub_resource type="PackedScene" id="PackedScene_hptm8"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("PlatformMedium", "StaticBody3D", "script", "metadata/_custom_type_script", "MeshInstance3D", "MeshInstance3D", "material_override", "mesh", "CollisionShape3D", "CollisionShape3D", "shape"),
+"node_count": 3,
+"node_paths": [NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 1073741824, 0, 5, 4, -1, 2, 6, 2, 7, 3, 0, 1073741825, 0, 9, 8, -1, 1, 10, 4, 0),
+"variants": [ExtResource("2_kry3j"), "uid://c8inat4tls4sn", ExtResource("4_6bp64"), SubResource("BoxMesh_xovdf"), SubResource("ConvexPolygonShape3D_ccokk")],
+"version": 3
+}
+
+[sub_resource type="BoxMesh" id="BoxMesh_d1ilt"]
+size = Vector3(1, 0.2, 5)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_8q6su"]
+points = PackedVector3Array(0.5, 0.1, 2.5, 0.5, -0.1, 2.5, 0.5, 0.1, -2.5, -0.5, 0.1, 2.5, -0.5, -0.1, 2.5, 0.5, -0.1, -2.5, -0.5, 0.1, -2.5, -0.5, -0.1, -2.5)
+
+[sub_resource type="PackedScene" id="PackedScene_6iyac"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("PlatformLong", "StaticBody3D", "script", "metadata/_custom_type_script", "MeshInstance3D", "MeshInstance3D", "material_override", "mesh", "CollisionShape3D", "CollisionShape3D", "shape"),
+"node_count": 3,
+"node_paths": [NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 2, 2, 0, 3, 1, 0, 1073741824, 0, 5, 4, -1, 2, 6, 2, 7, 3, 0, 1073741825, 0, 9, 8, -1, 1, 10, 4, 0),
+"variants": [ExtResource("2_kry3j"), "uid://c8inat4tls4sn", ExtResource("5_344ge"), SubResource("BoxMesh_d1ilt"), SubResource("ConvexPolygonShape3D_8q6su")],
+"version": 3
+}
+
+[sub_resource type="Environment" id="Environment_kry3j"]
+background_mode = 1
+background_color = Color(0.149905, 1.71225e-05, 0.151225, 1)
+ambient_light_color = Color(0.517184, 0.517184, 0.517184, 1)
+
+[node name="main" type="Node"]
+script = ExtResource("1_6bp64")
+
+[node name="PlatformSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 65.8212)
+script = ExtResource("1_kry3j")
+platforms = Array[PackedScene]([SubResource("PackedScene_ynf5e"), SubResource("PackedScene_hptm8"), SubResource("PackedScene_6iyac")])
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, -8.27662e-08, -1.89685e-09, 8.0437e-08, 0.965926, 0.258819, -1.95893e-08, -0.258819, 0.965926, 0, 3, 4)
+environment = SubResource("Environment_kry3j")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Score" type="Label" parent="UI"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 52.0
+offset_bottom = 26.0
+text = "0"
+
+[node name="HighScore" type="Label" parent="UI"]
+offset_left = 54.0
+offset_top = 2.0
+offset_right = 104.0
+offset_bottom = 26.0
+text = "0"
+
+[node name="Player" parent="." instance=ExtResource("6_21xkr")]
